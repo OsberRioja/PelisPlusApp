@@ -12,10 +12,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ucb.coffeespotapp.ui.theme.CoffeeSpotAppTheme
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+
+enum class ProviderType{
+    BASIC
+}
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+
+        //SETUP
+        val bundle = intent.extras
+        val email = bundle?.getString("email")
+        val provider = bundle?.getString("provider")
+        setup(email?:"",provider?:"")
+
         enableEdgeToEdge()
         setContent {
             CoffeeSpotAppTheme {
@@ -26,6 +42,19 @@ class HomeActivity : ComponentActivity() {
                     )
                 }
             }
+        }
+    }
+
+    private fun setup(email:String, provider:String){
+        title = "INICIO"
+        val emailTextView= findViewById<TextView>(R.id.emailTextView)
+        val passTextView= findViewById<TextView>(R.id.passTextView)
+        val btnLogout = findViewById<Button>(R.id.logoutbutton)
+        emailTextView.text = email
+        passTextView.text = provider
+        btnLogout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            onBackPressedDispatcher
         }
     }
 }
