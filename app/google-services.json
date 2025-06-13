@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "639453533454",
+    "project_id": "coffeespot-6cf6d",
+    "storage_bucket": "coffeespot-6cf6d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639453533454:android:d9cb4f2930198ff2b9335f",
+        "android_client_info": {
+          "package_name": "com.ucb.coffeespotapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX37BeLJNpG8BNf1mRR0Yy_6exxpvkoOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
