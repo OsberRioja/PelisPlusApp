@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoffeeSpotApp"
 include(":app")
- 
+include(":data")
+include(":framework")
