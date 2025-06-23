@@ -11,9 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.ucb.coffeespotapp.ui.theme.CoffeeSpotAppTheme
+import com.ucb.coffeespotapp.ui.theme.AppTheme
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -34,7 +33,7 @@ class HomeActivity : ComponentActivity() {
 
         enableEdgeToEdge()
         setContent {
-            CoffeeSpotAppTheme {
+            AppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting2(
                         name = "Android",
@@ -70,7 +69,7 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview2() {
-    CoffeeSpotAppTheme {
+    AppTheme {
         Greeting2("Android")
     }
 }

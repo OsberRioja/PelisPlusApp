@@ -12,7 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.ucb.coffeespotapp.ui.theme.CoffeeSpotAppTheme
+import com.ucb.coffeespotapp.ui.theme.AppTheme
 import android.widget.Button // Para los botones
 import android.widget.EditText
 import android.widget.TextView // Si necesitas textos
@@ -30,7 +30,7 @@ class AuthActivity : ComponentActivity() {
 
         enableEdgeToEdge()
         setContent {
-            CoffeeSpotAppTheme {
+            AppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -101,7 +101,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    CoffeeSpotAppTheme {
+    AppTheme {
         Greeting("Android")
     }
 }
