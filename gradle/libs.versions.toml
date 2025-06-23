@@ -26,6 +26,8 @@ navigationCommonAndroid = "2.9.0"
 navigationComposeAndroid = "2.9.0"
 coil = "2.7.0"
 runtimeLivedata = "1.8.3"
+roomCommonJvm = "2.7.2"
+roomRuntime = "2.6.0"
 
 
 [libraries]
@@ -66,6 +68,8 @@ ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-navigation-compose-android = { group = "androidx.navigation", name = "navigation-compose-android", version.ref = "navigationComposeAndroid" }
 androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
+androidx-room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.ref = "roomCommonJvm" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
