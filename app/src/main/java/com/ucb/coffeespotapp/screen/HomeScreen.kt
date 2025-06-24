@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import android.text.SpannableStringBuilder
 import android.util.Log
 import android.widget.Toast
@@ -182,6 +183,7 @@ fun CinemasButton(onNavigateToCinemas: () -> Unit) { // Recibe el callback como 
         )
     }
 }
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun MovieScreen(modifier: Modifier, onClickMovie: (Int) -> Unit, onNavigateToCinemas: () -> Unit) {
     val dataSource: MovieRemoteDataSource = MovieRemoteDataSource(RetrofitBuilder)

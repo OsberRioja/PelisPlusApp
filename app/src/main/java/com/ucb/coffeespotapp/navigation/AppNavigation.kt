@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.navigation
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -25,6 +26,7 @@ import com.ucb.coffeespotapp.screen.SearchScreen
 import com.ucb.coffeespotapp.screen.WelcomeScreen
 import com.ucb.coffeespotapp.viewModel.CinemaViewModel
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()

@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -36,6 +37,7 @@ import com.ucb.coffeespotapp.viewModel.UserStateViewModel
 import com.ucb.repository.MovieRepository
 import com.ucb.repository.UserRepository
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun ProfileScreen( onClickMovie: (Int) -> Unit) {
     val context = LocalContext.current

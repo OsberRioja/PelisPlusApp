@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -35,6 +36,7 @@ import com.ucb.coffeespotapp.viewModel.MovieHomeViewModel
 import com.ucb.coffeespotapp.viewModel.MovieInterestViewModel
 import com.ucb.repository.MovieRepository
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun SearchScreen(onMovieClick: (Int) -> Unit) {
     val dataSource: MovieRemoteDataSource = MovieRemoteDataSource(RetrofitBuilder)

@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -72,6 +73,7 @@ fun RegisterScreen(onClick: () -> Unit) {
     )
 }
 
+@SuppressLint("ViewModelConstructorInComposable")
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun RegisterContentScreen(modifier: Modifier, onClick: () -> Unit) {

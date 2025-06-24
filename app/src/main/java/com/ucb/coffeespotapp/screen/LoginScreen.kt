@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -66,6 +67,7 @@ fun LoginScreen(onClick : () -> Unit){
     )
 }
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun LoginContentScreen(modifier: Modifier, onClick: () -> Unit) {
     var username by remember { mutableStateOf("") }

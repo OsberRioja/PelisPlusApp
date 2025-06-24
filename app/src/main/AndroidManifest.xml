@@ -23,12 +23,12 @@
         android:theme="@style/Theme.CoffeeSpotApp"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".LoginFirstActivity"
             android:exported="false"
-            android:label="@string/title_activity_home"
+            android:label="@string/title_activity_login_first"
             android:theme="@style/Theme.CoffeeSpotApp" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CoffeeSpotApp">

@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -90,6 +91,7 @@ import com.ucb.repository.MovieDetailsRepository
 import com.ucb.repository.MovieRepository
 import dagger.hilt.android.scopes.ViewModelScoped
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun MovieDetailScreen(movieId: Int?, onBackPressed: () -> Unit) {
     val dataSource: MovieRemoteDataSource = MovieRemoteDataSource(RetrofitBuilder)
@@ -114,6 +116,7 @@ fun MovieDetailScreen(movieId: Int?, onBackPressed: () -> Unit) {
     }
 }
 
+@SuppressLint("ViewModelConstructorInComposable")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailContentScreen(eachMovie: Movie, onBackPressed: () -> Unit) {
@@ -320,6 +323,7 @@ fun RatingBar(
     }
 }
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun BottomSheetContent(movieID: Int, onClose: () -> Unit) {
     val repositoryComment = MovieCommentRepository(LocalContext.current)

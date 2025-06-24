@@ -1,7 +1,5 @@
 package com.ucb.coffeespotapp.screen
 
-import android.app.Activity
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -29,11 +27,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -49,14 +43,7 @@ import com.ucb.coffeespotapp.R
 import com.ucb.coffeespotapp.ui.theme.onPrimaryContainerLight
 import com.ucb.coffeespotapp.ui.theme.onPrimaryLight
 import com.ucb.coffeespotapp.ui.theme.onWhiteContainerDarkMediumContrast
-import com.ucb.coffeespotapp.viewModel.GoogleAuthClient
 import com.ucb.coffeespotapp.viewModel.GoogleSignInUtils
-import com.ucb.coffeespotapp.viewModel.UserViewModel
-import com.ucb.repository.UserRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 
 @Composable
 fun WelcomeScreen(onClick: () -> Unit, onLoginClick: () -> Unit, onSkip: () -> Unit) {

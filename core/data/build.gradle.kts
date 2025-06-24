@@ -1,19 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    // SOLO si necesitas KSP en este módulo
+   // id("com.google.devtools.ksp") version "1.9.22-1.0.17"
 }
 
 android {
     namespace = "com.ucb.data"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ucb.data"
         minSdk = 23
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 35
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,22 +38,23 @@ android {
 }
 
 dependencies {
-
+// Básicos
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose.v180)
-    implementation(platform(libs.androidx.compose.bom.v20231001))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.room.common.jvm)
+
+    // Room (versión simplificada)
     implementation(libs.androidx.room.runtime)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom.v20231001))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.room.ktx)       // Solo si usas corrutinas
+    //ksp("androidx.room:room-compiler:2.6.1")           // Usar KSP para compilación
+
+    // Eliminar estas dependencias opcionales (a menos que las uses):
+    implementation(libs.androidx.room.rxjava2)
+    implementation(libs.androidx.room.rxjava3)
+    implementation(libs.androidx.room.guava)
+    testImplementation(libs.androidx.room.testing)
+    implementation(libs.androidx.room.paging)
+
+    // Módulos internos
+    implementation(project(":core:model"))
+    implementation(project(":core:network"))
 }

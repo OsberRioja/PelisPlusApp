@@ -1,5 +1,6 @@
 package com.ucb.coffeespotapp.screen
 
+import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -52,6 +53,7 @@ fun FavoritesScreen(onClick: (Int) -> Unit, onNavigateToCinemas: () -> Unit) {
     )
 }
 
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun FavoriteMovieScreen(modifier: Modifier, onClickMovie: (Int) -> Unit, onNavigateToCinemas: () -> Unit) {
     val dataSource: MovieRemoteDataSource = MovieRemoteDataSource(RetrofitBuilder)
